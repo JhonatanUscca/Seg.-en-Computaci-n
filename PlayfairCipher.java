@@ -17,10 +17,7 @@ public class PlayfairCipher {
 	
 	public static final int MATRIX_SIZE = 5;
 			
-	private record PlayfairString(String processedMessage, 
-								List<Integer> whiteSpaceIndeces, 
-								List<Character[]> diSplitString) {
-		
+	private record PlayfairString(String processedMessage, List<Integer> whiteSpaceIndeces, List<Character[]> diSplitString) {
 		public static PlayfairString valueOfWithLetterI(String message) {		
 			String processedMessage = getProcessMessage(message);
 			List<Integer> whiteSpaceIndeces = getWhiteSpaceIndeces(message); 
